@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>  
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    </head>
+
+    <body>
+        <h2>연습문제 1-2</h2>
+        <script>
+            var input1 = prompt("당신의 몸무게를 입력해주세요. (단위: kg)");
+            var input2 = prompt("당신의 키를 입력해주세요. (단위: cm)");
+            var weight = Number(input1);
+            var height = Number(input2/100);
+            var bmi = weight / (height * height);
+
+/*
+코드 리뷰
+1. var n2에서 먼저 나눴으면 되는 값인데, 굳이 밑에서 나눠가지고 코드가 복잡해졌다...ㅎ
+2. var n1, n2가 아니라 입력했던 것을 상징하는 단어를 써주는 것이 더 보기 좋다.
+3. 계산된 bmi 지수도 var bmi로 따로 변수를 지정해주고 아래 콘솔에서는 변수명만 입력해서 표시하는 것이 더 보기 좋다.
+4. 답안지는 전부 document.write로 돼있다. 보기에는 이렇게해야 웹페이지에 출력이 되는듯하다. -> (O)
+
+-------수정 전 코드-------
+console.log("당신의 체질량 지수(BMI)는 " + (n1/((n2/100)*(n2/100))) + " 입니다.") 
+*/
+
+            document.write("당신의 체질량 지수(BMI)는 " + bmi + " 입니다.") 
+        </script>
+    </body>
+
+</html> 
