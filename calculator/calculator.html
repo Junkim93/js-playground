@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+    
+    <style>
+        #input1 {
+            text-align: right;
+        }
+        
+        #btn1 {
+            background-color: midnightblue;
+            color: white;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Calculator</h1>
+    <div><h3>계산 할 숫자를 입력해주세요. (준비중 ㅜㅜ)</h3></div>
+
+        <input id = 'input1' type = 'text' value = '0'><br>
+        
+        <button id = 'plus' onclick = 'readPlus()'>+</button>
+        <button id = 'minus' onclick = 'readMinus()'>-</button>
+        <button id = 'multiple' onclick = 'readMultiple()'>*</button>
+        <button id = 'division' onclick = 'readDivision()'>/</button>
+
+        <button id = 'btn1' onclick = 'main()'>=</button>
+       
+    <script src = "js_calculator.js"></script>
+</body>
+</html>
