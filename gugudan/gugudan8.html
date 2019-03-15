@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+</head>
+<body>
+    <h1>if문 사용해보기</h1>
+    출력할 단수: <input type="text" id="num">
+    <button onclick="display()">확인</button>
+    <script>
+        function display() {
+            var strN = document.getElementById('num').value;
+            var n = Number(strN);
+            if (n > 9 || 2 > n) {
+                document.write("2이상, 9이하의 값만 입력할 수 있습니다.");
+            } else {
+                for (var m = 1; m < 10; m++) {
+                    var ret = n * m
+                    document.write(n + " * " + m + " = " + ret + "<br>");
+                }
+            }
+        }
+    </script>
+</body>
+</html>
+<!-- 사용자가 입력한 숫자 값에 해당하는 단을 출력한다.
+예를 들어 사용자가 8이라는 숫자를 입력하면 8단 전체를 계산해 출력한다.
+사용자가 2 이상, 9 이하가 아닌 값을 입력하는 경우 “2이상, 9이하의 값만 입력할 수 있습니다.”라는 메시지를 출력한다.
+콘솔 버전, 웹 버전 두 가지로 -->
+
+
+
+<!-- alert 이후 반복 / 문자 입력시 Nan 해결 -->

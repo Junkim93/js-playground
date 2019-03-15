@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+</head>
+<body>
+    <h1>반복문을 사용한 구구단 연습</h1>
+    출력할 단수: <input type="text" id="num">
+    <p>Click the button to change the value of the text field.</p>
+    <button onclick="runGugudan()">확인</button>
+    <script>
+        function runGugudan() {
+            var strN = document.getElementById("num").value;
+            var n = Number(strN);
+            document.write("<h2>구구단 " + n + "단 출력" + "</h2>");
+            for (var m = 1; m < 10; m++) {
+                console.log(n + " * " + m + " = " + n * m);
+                document.write(n + " * " + m + " = " + n * m + "<br>");
+            }
+        }
+    </script>
+</body>
+</html>
+
+<!-- 지금까지 2 ~ 5단까지 구현하기 위해 단순, 반복적인 작업이 많았다.
+이 같은 단순, 반복적인 작업을 변수와 반복문을 활용해 제거하면서 6단과 7단을 구현한다. -->

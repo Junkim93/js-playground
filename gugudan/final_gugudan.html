@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+<body>
+    <script>
+        var input = prompt("구현하고 싶은 단수를 입력해주세요. ex) 팔칠단은 8,7");
+        
+        gugudan = {};
+        gugudan.split = function() {
+            input.split = (",", 2);
+        }
+
+        gugudan.results = [];
+        gugudan.current = -1;
+        gugudan.calculate = function(n) {
+            this.current = n;
+            for (var i = 0; i < 9; i++) {
+                this.results[i] = n * (i + 1);
+            }
+        }
+
+        gugudan.print = function(n, x, y) {
+            document.write("<h2>구구단 " + this.current + "단</h2>")
+            if (n < x) {
+                for (var i = 0; i < 9; i++) {
+                    document.write(this.current + " X " + (i+1) + " = " + this.results[i] + "<br>");
+                }
+            } else {
+                for (var j = 0; j < y; j++) {
+                    document.write(this.current + " X " + (j+1) + " = " + this.results[j] + "<br>");
+                }
+            }
+        }    
+
+        function main() {
+            gugudan.split();
+            var x = Number(input[0]);
+            var y = Number(input[2]);
+            for (var n = 2; n <= x; n++) {
+                gugudan.calculate(n);
+                gugudan.print(n, x, y);
+            }
+        }
+
+        main();
+
+// 학습 목표
+// 지금까지 학습한 내용을 활용해 한 단계 더 난이도가 있는 문제를 구현하는 경험을 한다.
+
+// 최종 요구사항
+// 참고자료, 교재, 인터넷의 도움 없이 백지 상태에서 구구단을 구현한다.
+// 사용자가 입력한 값에 따라 크기가 다른 구구단을 계산해 출력한다.
+// 예를 들어 사용자가 “8,7”과 같은 문자열을 입력하면 팔칠단을 구현한다. 팔칠단은 2 * 1 … 2 * 7, 3 * 1 … 3 * 7, … , 8 * 1 … 8 * 7 까지 구현하는 것을 의미한다.
+// html, css, DOM 등을 배워서 조금 더 예쁜 화면을 만들어 본다.
+    
+    </script>
+</body>
+</html>
