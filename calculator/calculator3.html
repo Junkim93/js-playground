@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator3</title>
+
+    <style>
+        #input1 {
+            text-align: right;
+        }
+        #input2 {
+            text-align: right;
+        }
+        #input3 {
+            text-align: right;
+        }
+    </style>
+
+</head>
+<body>
+    <h2>Calculator</h2>
+    <h3>계산할 두 개의 정수를 입력해주세요.</h3>
+    
+    <div>
+        첫번째 수: <input id = "input1" type = "text" value = "0"> <br>
+        두번째 수: <input id = "input2" type = "text" value = "0"> <br>
+        연산자 : <input id = "input3" type = "text">
+        <button id = "btn1" onclick = 'main()'>계산</button>
+    </div>    
+    
+    <h4>결과값</h4>
+    <div id = "output"></div>
+
+    <script src = "js_calculator3.js"></script>
+</body>
+</html>
