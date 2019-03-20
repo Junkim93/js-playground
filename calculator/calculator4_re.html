@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+
+<body>
+    <h2>사칙연산 계산기</h2>
+    <div id='output'>내 실력 ㅜㅜ</div>
+
+    <script>
+        function main() {
+            var n1 = Number(prompt("첫 번째 숫자를 입력해주세요."));
+            var out = document.getElementById('output');
+
+            var op, n2;
+            var result = n1;
+            var n = 2;
+
+            while (true) {
+                op = prompt("연산자를 입력해주세요. q를 입력하면 종료됩니다.");
+                if (op === "q") {
+                    break;
+                };
+                n2 = Number(prompt(n + " 번째 숫자를 입력해주세요."));
+                
+                if (op === "+") {
+                    result += n2;
+                } else if (op === "-") {
+                    result -= n2;
+                } else if (op === "*") {
+                    result *= n2;
+                } else if (op === "/") {
+                    result /= n2;
+                } else {
+                    result = "중간 오류";
+                    break;
+                };
+                n++;
+                console.log(result);  
+            };
+            out.innerHTML = "결과값은 " + result + "입니다.";
+        };
+
+        main();
+    </script>
+</body>
+
+</html>
