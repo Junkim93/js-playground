@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <style>
+        #bold {
+            font-size: 2em;
+        };
+    </style>
+</head>
+<body>
+    <h2>사칙연산 계산기 구현 - 함수 리팩토링</h2>
+    <div id='output'><h3>내 실력 ㅜㅜ</h3></div>
+
+    <script>
+        var out = document.getElementById('output');
+        var op, n1, n2, result;
+        var n = 2;
+
+        var getFirstValue = function() {
+            n1 = Number(prompt("1번째 숫자를 입력해주세요."));
+            result = n1;
+        };
+
+        function getSecondValue() {
+            n2 = Number(prompt(n + "번째 숫자를 입력해주세요."));
+            n++;
+        };
+
+        function getOperator() {
+            op = prompt("연산자를 입력해주세요. 'q'를 입력하면 종료됩니다.");
+        };
+
+        function calculate() {
+            switch (op) {
+                case "+":
+                result += n2;
+                break;
+                case "-":
+                result -= n2;
+                break;
+                case "*":
+                result *= n2;
+                break;
+                case "/":
+                result /= n2;
+                break;
+                default:
+                result = "중간오류";
+                break;
+            };
+        };
+
+        function print() {
+            var out = document.getElementById('output');
+            out.innerHTML = "결과값은 " + result + "입니다.";
+        };
+
+        function main() {
+            getFirstValue();
+
+            while (true) {
+                getOperator();
+                if (op === "q") {
+                    break;
+                };
+                getSecondValue();
+                calculate();
+            };
+            out.innerHTML = "결과값은 " + "<a id = 'bold'>" + result + "</a>" + " 입니다.";
+            
+        };    
+        main();
+    </script>
+</body>
+</html>
+
+
