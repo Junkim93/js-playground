@@ -1,0 +1,46 @@
+#title {
+    width: 283px;
+    height: 13px;
+    text-align: center;
+    border: 2px solid white;
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 17px;
+}
+
+#output {
+    background-color: white;
+    border: 2px solid black;
+    width: 277px;
+    padding: 10px;
+    font-family: courier;
+    font-size: 17px;
+    color: black;
+    text-align: right;
+    border-radius: 15px;
+    margin: 5px;
+}
+
+button {
+    background-color: black;
+    font-size: 15px;
+    border: 2px solid;
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    color: white;
+    border-radius: 15px;
+    box-align: center;
+}
+
+#eq {
+    background-color: rgb(219, 148, 16);
+    color: white;
+}
+
+#btnOutline {
+    border: 2px solid black;
+    width: 295px;
+    margin: 5px;
+    border-radius: 15px;
+}
