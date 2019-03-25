@@ -14,27 +14,27 @@
         numbers.prime = [];
         numbers.addAll = function(Max_num) {
             for (var n = 2; n <= Max_num; n++) {
-                numbers.all.push(n);
+                this.all.push(n);
             }
         }
         numbers.isPrime = function(number) {
-            for (var i = 0; i < numbers.all.length; i++) {
+            for (var i = 0; i < this.all.length; i++) {
                 var checkPrime = true;
-                for (var j = 2; j < numbers.all[i]; j++) {
-                    if (numbers.all[i] % j === 0) {
+                for (var j = 2; j < this.all[i]; j++) {
+                    if (this.all[i] % j === 0) {
                         checkPrime = false;
                         break;
                     }
                 }
                 if (checkPrime) {
-                    numbers.prime.push(numbers.all[i]);
+                    this.prime.push(this.all[i]);
                 }
                 }
             }
         numbers.getAllPrimes = function() {
             var c = 1
-            for (var n = 0; n <= numbers.prime.length; n++) {
-                document.write(c + '번째 소수: ' + numbers.prime[n] + '<br>');
+            for (var n = 0; n <= this.prime.length; n++) {
+                document.write(c + '번째 소수: ' + this.prime[n] + '<br>');
                 c++;
             }
         }
