@@ -1,5 +1,5 @@
 var inputOp = {};
-inputOp.plus = function () {
+inputOp.plus = function (event) {
     var plus = document.getElementById('input').value + "+";
     document.getElementById('input').value = plus;
 };

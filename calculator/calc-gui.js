@@ -3,7 +3,7 @@ var clickNumbers = function(event) {
     if (str === 'BS') {
         input.array.pop();
     } else {
-        input.array.push(" " + str + " ");
+        input.array.push(str);
     };
     return output.text.innerHTML = input.getInput();
 };

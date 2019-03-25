@@ -20,7 +20,7 @@
         var op, n1, n2, result;
         var n = 2;
 
-        var getFirstValue = function() {
+        function getFirstValue() {
             n1 = Number(prompt("1번째 숫자를 입력해주세요."));
             result = n1;
         };
@@ -56,7 +56,7 @@
 
         function print() {
             var out = document.getElementById('output');
-            out.innerHTML = "결과값은 " + result + "입니다.";
+            out.innerHTML = "결과값은 " + "<a id = 'bold'>" + result + "</a>" + " 입니다.";
         };
 
         function main() {
@@ -70,8 +70,7 @@
                 getSecondValue();
                 calculate();
             };
-            out.innerHTML = "결과값은 " + "<a id = 'bold'>" + result + "</a>" + " 입니다.";
-            
+            print();
         };    
         main();
     </script>
