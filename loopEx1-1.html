@@ -1,0 +1,52 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Masters Course Lv.1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <h2>반복문 예제 1-1</h2>
+    <script>
+        var count = -1;
+        var num = -1;
+        var sum = 0;
+        while (num !== 0) {
+            num = Number(prompt("숫자를 입력해주세요. 0=종료"));
+            sum += num;
+            count++;
+            console.log(count, sum);
+        }
+        document.write("총 " + count + "개 수의 합은 " + sum + "입니다.");
+        
+        // (수정코드 1차) - 풀이와의 차이점은 입력숫자에 대한 변수를 위해서 정의하고 내려가는지에 대한 차이 
+        // var count = -1;
+        // var sum = 0;
+        // while (num !== 0) {
+        //     var input = prompt("숫자를 입력해주세요. 0=종료");
+        //     var num = Number(input);
+        //     sum += num;
+        //     count++;
+        //     console.log(count, sum);
+        // }
+        // document.write("총 " + count + "개 수의 합은 " + sum + "입니다." );
+
+        // (처음 내가 한 코드, 카운트에 대한 부분 없음)
+        // var input1 = prompt("숫자를 입력해주세요. 0을 입력하면 종료됩니다.");
+        // var n1 = Number(input1);
+        // while (n2 !== 0) {
+        //     var input2 = prompt("숫자를 입력해주세요. 0을 입력하면 종료됩니다.");
+        //     var n2 = Number(input2);
+        //     n1 = n1 + n2;
+        // }
+        // console.log("입력한 수의 합은 " + n1 + "입니다.");
+    
+        //n2는 0과 같지않을때까지 반복하니까 n2가 0일때 반복을 멈춘다
+        //n2는 0일때 반복하니까 n2가 0이 아니면 계속 반복한다.
+    </script>
+
+</body>
+</html>
+
+

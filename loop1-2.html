@@ -1,0 +1,32 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <script>
+        var sum = 0;
+        // var n = 1;
+        // while (n <= 100) {
+        //     sum = sum + n;
+        //     console.log(n, sum);
+        //     n++;
+        // }
+        for (var n = 1; n <= 100; n++) {
+            sum += n
+            console.log(n, sum);
+        }
+        // sum += n 은 sum은 sum + n 과 같다.
+        // 따라서 n이 1일때 n은 100보다 작은 상태이기 때문에 sum += n  명령어를 실행하고,
+        // 이에 따른 결과값은 sum의 시작값이 0이기 때문에 0 + 1은 1이 된다.
+        // 이후에 n++에 따라 n은 2가 되고, n이 100이 될때까지 해당 명령어가 반복된다.
+
+        document.write("1부터 100까지 합은 " + sum + "입니다.")
+    </script>
+</body>
+</html>
+
+

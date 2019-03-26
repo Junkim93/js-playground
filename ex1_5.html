@@ -1,0 +1,47 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Masters Course Lv.1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <h2>연습문제 2</h2>
+    <p>Prime Number</p>
+    <script>
+        // var n = Number(prompt("정수를 입력해 주세요."));
+        // var nm = n-1
+        // while (n % nm !== 0 && n >= 1) {
+        //     console.log(n, nm);
+        //     console.log(n % nm);
+        //     nm--;
+        //     }
+        // if (nm > 1 || n <= 1) {
+        //     console.log(n + "은(는) 소수가 아닙니다.");
+        // } else {
+        //     console.log(n + "은(는) 소수입니다.");
+        //     }
+        // var isPrime = true; var n = Number(prompt(""))
+        //마스터즈코스1 풀이
+        var isPrime = true;
+        var n = Number(prompt("2이상의 정수를 입력해주세요."));
+        for (var i = 2; i < n; i++) {
+            if (n % i === 0) {
+                isPrime = false;
+                break;
+            }
+            console.log(isPrime, i); 
+        }
+
+        if (isPrime) {
+            document.write(n + "은(는) 소수입니다.");
+        } else {
+            document.write(n + "은(는) 소수가 아닙니다.");
+        }
+        //i = 2 (나눌 수가 1보다 무조건 크고 입력한 숫자보다는 작음, 그래서 나눴을때 나머지가 0이 아닐때까지 반복, 근데 n이 1이나 2일 경우는 어떻게되지?)
+        
+    </script>
+
+</body>
+</html>
