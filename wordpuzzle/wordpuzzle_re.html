@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>단어 움직이기 퍼즐</title>
+</head>
+
+<style>
+    p {
+        font-size: 20px;
+    }
+
+    button {
+        font-size: 20px;
+        margin: 5px;
+    }
+
+    #check {
+        font-size: 20px;
+    }
+</style>
+
+<body>
+    <h1>단어 움직이기 퍼즐</h1> 
+    <div id='progress'></div>
+    <div id='contents'>
+        <p id='word1'></p>
+        <div id='btns'>
+            <div id='word2'></div>
+            <button onclick='swap()'>뒤집기</button>
+            <button onclick='lshift()'>왼쪽으로 밀기</button>
+            <button onclick='rshift()'>오른쪽으로 밀기</button>
+        </div>
+        <p id='check'></p>
+        <p id='time'>0</p>
+    </div>
+    <script src='wordpuzzle_re.js'></script>
+</body>
+
+</html>
