@@ -70,13 +70,16 @@ game.copyBtnText = function () {
 };
 
 //event handler for swap button
+// ** 기존에 새 배열 변수 할당해서 역순으로 만들어 줬던걸
+// ** reverse라는 배열 조작 메서드를 사용하여 손쉽게 바꿨습니다.
 game.swap = function () {
-    var temp = [];
-    while (game.letters.length != 0) {
-        var s = game.letters.pop();
-        temp.push(s);
-    }
-    game.letters = temp;
+    // var temp = [];
+    // while (game.letters.length !== 0) {
+    //     var s = game.letters.pop();
+    //     temp.push(s);
+    // }
+    // game.letters = temp;
+    game.letters.reverse();
     game.copyBtnText();
     game.updateDisplay();
 };
